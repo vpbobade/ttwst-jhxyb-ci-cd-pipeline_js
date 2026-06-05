@@ -1,26 +1,3 @@
-
-
-
-Step 4: Test Code Coverage with nosetests
-You will use nose in this step to unit test the source code. Nose is configured via the included setup.cfg file to automatically include the flags --with-spec and --spec-color so that red-green-refactor is meaningful. If you are in a command shell that supports colors, passing tests will be green and failing tests will be red.
-
-Nose is also configured to automatically run the coverage tool, and you should see a percentage of coverage report at the end of your tests.
-
-Your Task
-Add a new named step after the Lint with flake8 step. Call this step Run unit tests with nose.
-
-Next, you want to run the nosetests command to test your code and report on code coverage.
-
-plaintext
-
-nosetests -v --with-spec --spec-color --with-coverage --cover-package=app
-Since you are running a single command, you do not have to use the pipe | operator with run.
-
-Double-check that your work matches the solution below.
-
-Solution
-yaml
-
 name: CI workflow
 
 on:
@@ -49,9 +26,3 @@ jobs:
 
       - name: Run unit tests with nose
         run: nosetests -v --with-spec --spec-color --with-coverage --cover-package=app
-Replace the workflow.yml file with the code snippet below. You can also copy relevant parts of the code. Be sure to indent properly:
-
-Step 3: Lint with flake8
-
-Step 5: Push Code to GitHub
-The content of this lab is licensed under Apache 2.0
